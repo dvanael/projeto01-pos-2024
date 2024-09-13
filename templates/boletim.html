@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block title %}Boletim do Usuário{% endblock title %}
+
+{% block content %}
+  <h1>Boletim de {{user_data.nome_usual}}</h1>
+  <p>{{boletim}}</p>
+{% endblock content %}

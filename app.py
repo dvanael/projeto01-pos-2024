@@ -29,6 +29,12 @@ def index():
     else:
         return render_template('index.html')
 
+@app.route("/boletim/")
+def boletim():
+    meus_dados = oauth.suap.get('v2/minhas-informacoes/meus-dados')
+    boletim = oauth.suap.get('v2/minhas-informacoes/meus-diarios/2022/1/')
+    print(boletim.json())
+    return render_template("boletim.html", user_data=meus_dados.json(), boletim=boletim.json())
 
 @app.route('/login')
 def login():

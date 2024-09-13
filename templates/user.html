@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 
-{% block title %}{% endblock title %}
+{% block title %}Perfil do Usuário{% endblock title %}
 
 {% block content %}
   <h1>{{user_data.nome_usual}}</h1>
+  <img src="{{user_data.url_foto_150x200}}" alt="Foto do SUAP">
+  <p>Matricula: {{user_data.vinculo.matricula}}</p>
 {% endblock content %}
