@@ -1,0 +1,7 @@
+<nav>
+  {% if 'suap_token' in session %}
+  <a href="{{url_for('index')}}">Inicio</a>
+  <a href="{{url_for('index')}}">Meus Boletins</a>
+  <a href="{{url_for('logout')}}">Sair</a>
+  {% endif %}
+</nav>

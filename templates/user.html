@@ -3,7 +3,7 @@
 {% block title %}Perfil do Usuário{% endblock title %}
 
 {% block content %}
-  <h1>{{user_data.nome_usual}}</h1>
-  <img src="{{user_data.url_foto_150x200}}" alt="Foto do SUAP">
-  <p>Matricula: {{user_data.vinculo.matricula}}</p>
+  <h1>{{user.nome_usual}}</h1>
+  <img src="{{user.url_foto_150x200}}" alt="Foto do SUAP">
+  <p>Matricula: {{user.vinculo.matricula}}</p>
 {% endblock content %}
