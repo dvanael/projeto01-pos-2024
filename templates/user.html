@@ -4,6 +4,16 @@
 
 {% block content %}
   <h1>{{user.nome_usual}}</h1>
-  <img src="{{user.url_foto_150x200}}" alt="Foto do SUAP">
   <p>Matricula: {{user.vinculo.matricula}}</p>
+  <img src="{{user.url_foto_150x200}}" alt="Foto do SUAP">
+  <p>CPF: {{user.cpf}}</p>
+  <p>Data de Nascimento: {{user.data_nascimento}}</p>
+  <p>Email: {{user.email}}</p>
+  <hr>
+  <p>Curso: {{user.vinculo.curso}}</p>
+  <p>Campus: IFRN {{user.vinculo.campus}}</p>
+  <p>Situcao: {{user.vinculo.situacao}}</p>
+  <a class="" href="{{url_for('boletim')}}">Meus Boletins</a>
+  <br>
+  <a href="{{user.vinculo.curriculo_lattes}}">{{user.vinculo.curriculo_lattes}}</a>
 {% endblock content %}

@@ -1,6 +1,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
 
+:root{
+  --white-main: #f7fcff;
+  --black-main: #0d1117;
+  --purple-main: #c590ec;
+  --purple-secondary: #a772cd;
+
+  --border-radius: 50px;
+}
+
 *{
   font-family: "Inconsolata", monospace;
   font-optical-sizing: auto;
@@ -9,6 +18,63 @@
     "wdth" 100;
 }
 
-body{
-  background-color: aliceblue;
+body {
+  margin: 40px auto;
+  max-width: 950px;
+  line-height: 1.5;
+  font-size: 18px;
+  color: var(--black-main);
+  background-color: var(--white-main);
+  padding: 0 0.1dvh
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: var(--white-main);
+    background-color: var(--black-main);
+  }
+
+  a{
+    &:link{
+      color: #58a6ff
+    }
+    &:visited{
+      color: #8e96f0
+    }
+  }
+
+  select{
+    color: var(--white-main);
+    background-color: var(--black-main);
+  }
+
+  .login-btn{
+    color: var(--black-main) !important;
+  }
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-btn{
+  height: auto !important;
+  padding: 2dvh 4dvh;
+  font-size: 25px;
+  font-weight: bolder;
+  color: var(--white-main);
+  background-color: var(--purple-main);
+  border-color: var(--purple-secondary);
+  border-radius: var(--border-radius);
+  &:hover{
+    background-color: var(--purple-secondary);
+    border-color: var(--purple-secondary);
+  }
 }

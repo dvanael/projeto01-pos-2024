@@ -5,25 +5,66 @@
 {% block content %}
   <h1>Boletim de {{context.user.nome_usual}}</h1>
 
-  <form action="{{url_for('boletim')}}" method="post">
+  <form id="id_boletim_form" action="{{url_for('boletim')}}" method="post">
 
     <label for="id_peridodos">Ano Letivo: </label>
 
     <select name="periodo" id="id_periodos">
       {% for periodo in context.periodos %}
-      <option 
+      <option
         value="{{periodo.ano_letivo}}.{{periodo.periodo_letivo}}"
         {% if periodo.ano_letivo ~ '.' ~ periodo.periodo_letivo == context.selected_periodo %}selected{% endif %}>
           {{periodo.ano_letivo}}.{{periodo.periodo_letivo}}
       </option>
       {% endfor %}
     </select>
-
-    <button type="submit">Enviar</button>
   </form>
 
-  {% for disciplina in context.boletim %}
-    <p>{{disciplina.disciplina}}</p>
-  {% endfor %}
+  <table class="">
+    <thead>
+      <tr>
+        <th>Disciplina</th>
+        <th>Nota.1</th>
+        <th>Nota.2</th>
+        <th>Nota.3</th>
+        <th>Nota.4</th>
+        <th>Média Final</th>
+        <th>Situação</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for disciplina in context.boletim %}
+        <tr>
+          <td class="disciplina-name">{{disciplina.disciplina}}</td>
+          <td>
+            {% if disciplina.nota_etapa_1.nota %}
+              {{disciplina.nota_etapa_1.nota}}
+            {% endif %}
+          </td>
+          <td>
+            {% if disciplina.nota_etapa_2.nota %}
+              {{disciplina.nota_etapa_2.nota}}
+            {% endif %}
+          </td>
+          <td>
+            {% if disciplina.nota_etapa_3.nota %}
+              {{disciplina.nota_etapa_3.nota}}
+            {% endif %}
+          </td>
+          <td>
+            {% if disciplina.nota_etapa_4.nota %}
+              {{disciplina.nota_etapa_4.nota}}
+            {% endif %}
+          </td>
+          <td>
+            {% if disciplina.media_final_disciplina %}
+              {{disciplina.media_final_disciplina}}
+            {% endif %}
+          </td>
+          <td>{{disciplina.situacao}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 
 {% endblock content %}

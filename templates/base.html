@@ -8,9 +8,8 @@
   <title>SUAP OAUTH - {% block title %}{% endblock title %}</title>
 
   <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/skeleton.css') }}"/>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}"/>
 
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}"/>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"/>
 
 </head>
@@ -18,4 +17,6 @@
   {% include "partials/navbar.html" %}
   {% block content %}{% endblock content %}
 </body>
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"/>
+  <script src="{{ url_for('static', filename='js/main.js') }}"/>
 </html>
