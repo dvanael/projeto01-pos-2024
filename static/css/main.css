@@ -29,11 +29,6 @@ body {
   width: 100%;
 }
 
-/* h1, h2, h3 {
-  line-height: 1.2;
-  font-weight: 600;
-} */
-
 nav {
   background: var(--grey-main);
   border-bottom: #0d1117 solid 3px;
@@ -116,11 +111,15 @@ a{
   }
 }
 
-.circle{
+.circle {
   height: 1.8svh;
   width: 1.8svh;
   border-radius: 25px;
   border: var(--black-main) solid .2rem;
+}
+
+.circle {
+  cursor: pointer;
 }
 
 .content:hover {
