@@ -78,6 +78,36 @@ nav {
   border: #0d1117 solid 3px;
 }
 
+.login-content{
+  height: 30svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10svh;
+  width: 40svh;
+  font-weight: 600;
+  text-decoration: none;
+  border: var(--black-main) solid .2rem;
+  &:hover{
+    transform: scale(1.05);
+    transition: ease-out 0.2s;
+    font-weight: 800;
+  }
+}
+
+.circle{
+  height: 1.8svh;
+  width: 1.8svh;
+  border-radius: 25px;
+  border: var(--black-main) solid .2rem;
+}
+
 .content:hover {
   box-shadow: 10px 10px var(--grey-secondary);
   transform: scale(1.01);
