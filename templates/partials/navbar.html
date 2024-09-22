@@ -1,10 +1,12 @@
+{% if 'suap_token' in session %}
 <nav class="navbar fixed-top navbar-expand-lg">
-  <div class="container-fluid justify-content-start align-items-center  gap-3">
-    <a class="navbar-brand" href="#"><i class='bx bx-book-bookmark'></i></a>
-    {% if 'suap_token' in session %}
+  <div class="container-fluid ">
+    <div class="container d-flex justify-content-start align-items-center gap-3">
+      <a class="navbar-brand" href="#"><i class='bx bx-book-bookmark'></i></a>
       <a class="nav-link active" aria-current="page" href="{{url_for('index')}}">Inicio</a>
       <a class="nav-link" href="{{url_for('boletim')}}">Boletins</a>
       <a class="nav-link" href="{{url_for('logout')}}">Sair</a>
-    {% endif %}
+    </div>
   </div>
 </nav>
+{% endif %}
