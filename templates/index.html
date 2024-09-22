@@ -3,7 +3,23 @@
 {% block title %}Inicio{% endblock title %}
 
 {% block content %}
-  <div class="center">
-    <a class="login-btn" href="{{url_for('login')}}">Entrar com SUAP</a>
+  <div class="container d-center">
+    <div class="content">
+      <div class="title-content">
+        <div class="gap-1 d-flex align-items-center">
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+        <div class="mx-auto fw-bold">login.exe</div>
+      </div>
+      <div class="login-content">
+        <a class="login-btn pointer fs-4" href="{{url_for('login')}}">
+          <div class="me-auto">
+            Entrar com SUAP
+          </div>
+          <i class="bx bx-right-arrow-alt fs2"></i>
+        </a>
+      </div>
+    </div>
   </div>
 {% endblock content %}

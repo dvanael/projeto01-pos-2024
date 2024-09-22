@@ -40,12 +40,17 @@ nav {
   height: 3.5rem;
 }
 
+a{
+  color: var(--black-main);
+}
+
 .nav-link {
   font-size: 1rem;
 }
 
 
 .content {
+  width: 800px;
   max-width: 650px;
   position: relative;
   top: 5.5rem;
@@ -88,16 +93,18 @@ nav {
 .login-btn{
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 10svh;
-  width: 40svh;
+  height: 10dvh;
+  width: 40dvh;
+  padding: 2vh;
   font-weight: 600;
   text-decoration: none;
   border: var(--black-main) solid .2rem;
+  background-color: var(--grey-main);
   &:hover{
     transform: scale(1.05);
-    transition: ease-out 0.2s;
     font-weight: 800;
+    transition: ease-out 0.2s;
+    i{font-weight: 800;}
   }
 }
 
@@ -119,8 +126,10 @@ nav {
   height: 10rem;
 }
 
-.bolinha {
-  cursor: pointer;
+.d-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 652px) {
@@ -131,5 +140,12 @@ nav {
 
   .content {
     margin-bottom: 40px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .login-btn{
+    width: 35dvh;
+    height: 7dvh;
   }
 }
