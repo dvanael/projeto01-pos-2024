@@ -1,80 +1,105 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 :root{
-  --white-main: #f7fcff;
+  --white-main: #F5F4F4;
   --black-main: #0d1117;
-  --purple-main: #c590ec;
+  --grey-secondary: #3b3b3b;
+  --grey-main: #BCBDBD;
   --purple-secondary: #a772cd;
 
   --border-radius: 50px;
 }
 
 *{
-  font-family: "Inconsolata", monospace;
-  font-optical-sizing: auto;
+  font-family: "Nunito", sans-serif;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 40px auto;
-  max-width: 950px;
-  line-height: 1.5;
-  font-size: 18px;
+  font-size: 1rem;
   color: var(--black-main);
   background-color: var(--white-main);
-  padding: 0 0.1dvh
+
+  height: 100vh;
+  width: 100%;
 }
 
-h1, h2, h3 {
+/* h1, h2, h3 {
   line-height: 1.2;
   font-weight: 600;
+} */
+
+nav {
+  background: var(--grey-main);
+  border-bottom: #0d1117 solid 3px;
+  font-weight: bold;
+  height: 3.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    color: var(--white-main);
-    background-color: var(--black-main);
-  }
-
-  a{
-    &:link{
-      color: #58a6ff
-    }
-    &:visited{
-      color: #8e96f0
-    }
-  }
-
-  select{
-    color: var(--white-main);
-    background-color: var(--black-main);
-  }
-
-  .login-btn{
-    color: var(--black-main) !important;
-  }
+.nav-link {
+  font-size: 1rem;
 }
 
-.center {
+
+.content {
+  max-width: 650px;
+  position: relative;
+  top: 5.5rem;
+  border: #0d1117 solid 3px;
+}
+
+.title-content {
+  background: var(--grey-main);
   display: flex;
   align-items: center;
-  justify-content: center;
+  position: relative;
+  border-bottom: var(--black-main) solid 3px;
+  height: 2.5rem;
+  padding: .5rem;
 }
 
-.login-btn{
-  height: auto !important;
-  padding: 2dvh 4dvh;
-  font-size: 25px;
-  font-weight: bolder;
-  color: var(--white-main);
-  background-color: var(--purple-main);
-  border-color: var(--purple-secondary);
-  border-radius: var(--border-radius);
-  &:hover{
-    background-color: var(--purple-secondary);
-    border-color: var(--purple-secondary);
+.user-content {
+  padding: 20px;
+}
+
+.info-text {
+  font-weight: bold;
+}
+
+.user-content .pfp {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 12em;
+  height: 12em;
+  border: #0d1117 solid 3px;
+}
+
+.content:hover {
+  box-shadow: 10px 10px var(--grey-secondary);
+  transform: scale(1.01);
+  transition: ease-out 0.2s;
+}
+
+.gato-estudando {
+  width: 10rem;
+  height: 10rem;
+}
+
+.bolinha {
+  cursor: pointer;
+}
+
+@media (max-width: 652px) {
+  body {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .content {
+    margin-bottom: 40px;
   }
 }

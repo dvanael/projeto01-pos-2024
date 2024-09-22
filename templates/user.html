@@ -3,17 +3,48 @@
 {% block title %}Perfil do Usuário{% endblock title %}
 
 {% block content %}
-  <h1>{{user.nome_usual}}</h1>
-  <p>Matricula: {{user.vinculo.matricula}}</p>
-  <img src="{{user.url_foto_150x200}}" alt="Foto do SUAP">
-  <p>CPF: {{user.cpf}}</p>
-  <p>Data de Nascimento: {{user.data_nascimento}}</p>
-  <p>Email: {{user.email}}</p>
-  <hr>
-  <p>Curso: {{user.vinculo.curso}}</p>
-  <p>Campus: IFRN {{user.vinculo.campus}}</p>
-  <p>Situcao: {{user.vinculo.situacao}}</p>
-  <a class="" href="{{url_for('boletim')}}">Meus Boletins</a>
-  <br>
-  <a href="{{user.vinculo.curriculo_lattes}}">{{user.vinculo.curriculo_lattes}}</a>
+<div class="container d-flex justify-content-center align-items-center">
+  <div class="content">
+    <div class="title-content">
+      <div class=" gap-1 d-flex align-items-center">
+        <i class='bolinha bx bxs-circle'></i>
+        <i class='bolinha bx bxs-circle'></i>
+      </div>
+      <div class="mx-auto fw-bold">meus-dados.exe</div>
+    </div>
+    
+    <div class="user-content">
+      <div class="row">
+        
+        <div class="col-md-4 col-12 d-flex justify-content-center align-items-center">
+          <img class="pfp" src="https://i.pinimg.com/564x/f5/95/0c/f5950c319c7b62f437819a985af80c73.jpg" alt="Foto do SUAP">
+        </div>
+
+        <div class="col-md-8 col-12 align-items-center">
+          <h1>{{user.nome_usual}}</h1>
+          <p>Matricula: <span class="info-text"> {{user.vinculo.matricula}}</span></p>
+          <p>CPF: <span class="info-text">{{user.cpf}}</span></p>
+          <p>Data de Nascimento: <span class="info-text">{{user.data_nascimento}}</span>
+          </p>
+          <p>Email: <span class="info-text">{{user.email}}</span></p>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-8 col-12">
+          <hr>
+          <p>Curso:<span class="info-text"> {{user.vinculo.curso}} </span> </p>
+          <p>Campus: <span class="info-text"> IFRN {{user.vinculo.campus}} </span> </p>
+          <p>Situação: <span class="info-text"> {{user.vinculo.situacao}} </span> </p>
+        </div>
+        <div class="col-md-4 col-12 d-flex justify-content-center align-items-center">
+          <img class="gato-estudando" src="{{ url_for('static', filename='img/gato-estudo.png') }}">
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+  
 {% endblock content %}
