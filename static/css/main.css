@@ -17,6 +17,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  cursor: url("/static/img/cursor.png"), auto;
 }
 
 body {
@@ -42,6 +43,13 @@ nav {
 
 a{
   color: var(--black-main);
+}
+
+.pointer{
+  cursor: url("/static/img/poiter.png") 6 0, pointer;
+  *{
+    cursor: inherit;
+  }
 }
 
 .nav-link {
