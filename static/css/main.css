@@ -31,7 +31,7 @@ body {
 
 nav {
   background: var(--grey-main);
-  border-bottom: #0d1117 solid 3px;
+  border-bottom: var(--black-main) solid 3px;
   font-weight: bold;
   height: 3.5rem;
 }
@@ -57,7 +57,7 @@ a{
   max-width: 650px;
   position: relative;
   top: 5.5rem;
-  border: #0d1117 solid 3px;
+  border: var(--black-main) solid 3px;
 }
 
 .title-content {
@@ -83,7 +83,7 @@ a{
   object-fit: cover;
   width: 12em;
   height: 12em;
-  border: #0d1117 solid 3px;
+  border: var(--black-main) solid 3px;
 }
 
 .login-content{
@@ -137,6 +137,10 @@ a{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.select{
+  
 }
 
 @media (max-width: 652px) {
