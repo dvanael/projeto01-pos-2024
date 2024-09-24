@@ -54,7 +54,7 @@ a{
 
 .content {
   width: 800px;
-  max-width: 650px;
+  min-width: 650px;
   position: relative;
   top: 5.5rem;
   border: var(--black-main) solid 3px;
@@ -139,8 +139,15 @@ a{
   align-items: center;
 }
 
-.select{
-  
+.boletim-content {
+  width: 1500px !important;
+}
+
+.select {
+  border: #0d1117 solid 3px;
+  background: var(--grey-main);
+  padding: 5px;
+  font-weight: bold;
 }
 
 @media (max-width: 652px) {
