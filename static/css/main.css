@@ -4,7 +4,7 @@
 :root{
   --white-main: #F5F4F4;
   --black-main: #0d1117;
-  --grey-secondary: #3b3b3b;
+  --grey-secondary: #848484;
   --grey-main: #BCBDBD;
 
   --border-radius: 50px;
@@ -44,6 +44,25 @@ hr{
   opacity: 1;
 }
 
+::-webkit-scrollbar {
+  width: .7rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--white-main);
+  border-inline: var(--black-main) solid 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--grey-main);
+  border: var(--black-main) solid 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--grey-secondary);
+  border: var(--black-main) solid 2px;
+}
+
 .pointer{
   cursor: url("/static/img/poiter.png") 6 0, pointer;
   *{
@@ -52,7 +71,7 @@ hr{
 }
 
 .move{
-  cursor: url("/static/img/move.png"), pointer;
+  cursor: url("/static/img/move.png"), crosshair !important;
   *{
     cursor: inherit;
   }
@@ -68,11 +87,19 @@ hr{
 
 
 .content {
-  width: 800px;
-  min-width: 650px;
+  width: 600px;
   position: relative;
-  top: 5.5rem;
+  margin-block: 5.5rem;
   border: var(--black-main) solid 3px;
+  &:hover {
+    box-shadow: 10px 10px var(--grey-secondary);
+    transform: scale(1.01);
+    transition: ease-out 0.2s;
+  }
+}
+
+.box-shadow{
+  box-shadow: 10px 10px var(--grey-secondary);
 }
 
 .title-content {
@@ -100,8 +127,9 @@ hr{
 .user-content .pfp {
   border-radius: 50%;
   object-fit: cover;
-  width: 12em;
-  height: 12em;
+  aspect-ratio: 1/1;
+  width: 11.5em;
+  height: 11.5em;
   border: var(--black-main) solid 3px;
 }
 
@@ -137,12 +165,6 @@ hr{
   border: var(--black-main) solid .2rem;
 }
 
-.content:hover {
-  box-shadow: 10px 10px var(--grey-secondary);
-  transform: scale(1.01);
-  transition: ease-out 0.2s;
-}
-
 .gato-estudando {
   width: 10rem;
   height: 10rem;
@@ -159,7 +181,7 @@ hr{
 }
 
 .select {
-  border: #0d1117 solid 3px;
+  border: var(--black-main) solid 3px;
   background: var(--grey-main);
   padding: 5px;
   font-weight: bold;
@@ -184,5 +206,11 @@ hr{
   .login-btn{
     width: 35dvh;
     height: 7dvh;
+  }
+  .content{
+    width: auto;
+  }
+  .boletim-content{
+    max-width: 42dvh;
   }
 }

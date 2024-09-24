@@ -19,7 +19,7 @@
 
       <form id="id_boletim_form" class="my-3" action="{{url_for('boletim')}}" method="post">
 
-        <label class="fs-5" for="id_peridodos">Ano Letivo </label>
+        <label class="fs-5 fw-bold" for="id_peridodos">Ano Letivo </label>
 
         <select class="select" name="periodo" id="id_periodos">
           {% for periodo in context.periodos %}
@@ -31,53 +31,55 @@
           {% endfor %}
         </select>
       </form>
-
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Disciplina</th>
-            <th>Nota.1</th>
-            <th>Nota.2</th>
-            <th>Nota.3</th>
-            <th>Nota.4</th>
-            <th>Média Final</th>
-            <th>Situação</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for disciplina in context.boletim %}
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
             <tr>
-              <td class="disciplina-name">{{disciplina.disciplina}}</td>
-              <td>
-                {% if disciplina.nota_etapa_1.nota %}
-                  {{disciplina.nota_etapa_1.nota}}
-                {% endif %}
-              </td>
-              <td>
-                {% if disciplina.nota_etapa_2.nota %}
-                  {{disciplina.nota_etapa_2.nota}}
-                {% endif %}
-              </td>
-              <td>
-                {% if disciplina.nota_etapa_3.nota %}
-                  {{disciplina.nota_etapa_3.nota}}
-                {% endif %}
-              </td>
-              <td>
-                {% if disciplina.nota_etapa_4.nota %}
-                  {{disciplina.nota_etapa_4.nota}}
-                {% endif %}
-              </td>
-              <td>
-                {% if disciplina.media_final_disciplina %}
-                  {{disciplina.media_final_disciplina}}
-                {% endif %}
-              </td>
-              <td>{{disciplina.situacao}}</td>
+              <th>Disciplina</th>
+              <th>Nota.1</th>
+              <th>Nota.2</th>
+              <th>Nota.3</th>
+              <th>Nota.4</th>
+              <th class="media-final">Média Final</th>
+              <th>Situação</th>
             </tr>
-          {% endfor %}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {% for disciplina in context.boletim %}
+              <tr>
+                <td class="disciplina-name">{{disciplina.disciplina}}</td>
+                <td>
+                  {% if disciplina.nota_etapa_1.nota %}
+                    {{disciplina.nota_etapa_1.nota}}
+                  {% endif %}
+                </td>
+                <td>
+                  {% if disciplina.nota_etapa_2.nota %}
+                    {{disciplina.nota_etapa_2.nota}}
+                  {% endif %}
+                </td>
+                <td>
+                  {% if disciplina.nota_etapa_3.nota %}
+                    {{disciplina.nota_etapa_3.nota}}
+                  {% endif %}
+                </td>
+                <td>
+                  {% if disciplina.nota_etapa_4.nota %}
+                    {{disciplina.nota_etapa_4.nota}}
+                  {% endif %}
+                </td>
+                <td>
+                  {% if disciplina.media_final_disciplina %}
+                    {{disciplina.media_final_disciplina}}
+                  {% endif %}
+                </td>
+                <td>{{disciplina.situacao}}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
     </div>
   </di>
 </div>
