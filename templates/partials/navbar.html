@@ -2,10 +2,10 @@
 <nav class="navbar fixed-top navbar-expand-lg">
   <div class="container-fluid ">
     <div class="container d-flex justify-content-start align-items-center gap-3">
-      <a class="navbar-brand" href="#"><i class='bx bx-book-bookmark'></i></a>
-      <a class="nav-link active pointer" aria-current="page" href="{{url_for('index')}}">Inicio</a>
-      <a class="nav-link pointer" href="{{url_for('boletim')}}">Boletins</a>
-      <a class="nav-link pointer" href="{{url_for('logout')}}">Sair</a>
+      <a class="navbar-brand nav-link pointer" href="{{url_for('index')}}"><img class="computer" src="{{ url_for('static', filename='img/computer.png') }}" alt=""></a>
+      <a class="nav-link active" aria-current="page" href="{{url_for('index')}}">Inicio</a>
+      <a class="nav-link" href="{{url_for('boletim')}}">Boletins</a>
+      <a class="nav-link" href="{{url_for('logout')}}">Sair</a>
     </div>
   </div>
 </nav>

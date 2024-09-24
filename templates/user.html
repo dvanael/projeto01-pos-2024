@@ -5,7 +5,7 @@
 {% block content %}
 <div class="container d-flex justify-content-center align-items-center" styles="(styles)">
   <div id="draggable" class="content">
-    <div class="title-content pointer" >
+    <div class="title-content move" >
       <div class=" gap-1 d-flex align-items-center">
         <div class="circle"></div>
         <div class="circle"></div>
@@ -13,16 +13,16 @@
       </div>
       <div class="mx-auto fw-bold">meus-dados.exe</div>
     </div>
-    
+
     <div class="user-content">
       <div class="row">
-        
+
         <div class="col-md-4 col-12 d-flex justify-content-center align-items-center">
           <img class="pfp" src="https://i.pinimg.com/564x/f5/95/0c/f5950c319c7b62f437819a985af80c73.jpg" alt="Foto do SUAP">
         </div>
 
-        <div class="col-md-8 col-12 align-items-center">
-          <h1>{{user.nome_usual}}</h1>
+        <div class="col-md-8 col-12 mt-3 mt-md-0 align-items-center">
+          <h1 class="title">{{user.nome_usual}}</h1>
           <p>Matricula: <span class="info-text"> {{user.vinculo.matricula}}</span></p>
           <p>CPF: <span class="info-text">{{user.cpf}}</span></p>
           <p>Data de Nascimento: <span class="info-text">{{user.data_nascimento}}</span>
@@ -30,7 +30,7 @@
           <p>Email: <span class="info-text">{{user.email}}</span></p>
         </div>
       </div>
-      
+
       <div class="row">
         <div class="col-md-8 col-12">
           <hr>
@@ -42,7 +42,7 @@
           <img class="gato-estudando" src="{{ url_for('static', filename='img/gato-estudo.png') }}">
         </div>
       </div>
-      
+
     </div>
   </div>
 </div>

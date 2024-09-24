@@ -6,7 +6,6 @@
   --black-main: #0d1117;
   --grey-secondary: #3b3b3b;
   --grey-main: #BCBDBD;
-  --purple-secondary: #a772cd;
 
   --border-radius: 50px;
 }
@@ -40,6 +39,11 @@ a{
   color: var(--black-main);
 }
 
+hr{
+  border: var(--grey-main) solid 2px;
+  opacity: 1;
+}
+
 .pointer{
   cursor: url("/static/img/poiter.png") 6 0, pointer;
   *{
@@ -47,8 +51,19 @@ a{
   }
 }
 
+.move{
+  cursor: url("/static/img/move.png"), pointer;
+  *{
+    cursor: inherit;
+  }
+}
+
 .nav-link {
   font-size: 1rem;
+  transition: ease-out 0.2s;
+  &:hover{
+    transform: scale(1.15);
+  }
 }
 
 
@@ -72,6 +87,10 @@ a{
 
 .user-content {
   padding: 20px;
+}
+
+.title{
+  font-weight: bolder;
 }
 
 .info-text {
@@ -118,10 +137,6 @@ a{
   border: var(--black-main) solid .2rem;
 }
 
-.circle {
-  cursor: pointer;
-}
-
 .content:hover {
   box-shadow: 10px 10px var(--grey-secondary);
   transform: scale(1.01);
@@ -148,6 +163,10 @@ a{
   background: var(--grey-main);
   padding: 5px;
   font-weight: bold;
+}
+
+.computer{
+  width: 2rem;
 }
 
 @media (max-width: 652px) {

@@ -4,8 +4,8 @@
 
 {% block content %}
 <div class="container d-center">
-  <div id="draggable" class="content boletim-content">
-    <div class="title-content pointer">
+  <div class="content">
+    <div class="title-content move">
       <div class="gap-1 d-flex align-items-center">
         <div class="circle"></div>
         <div class="circle"></div>
@@ -15,7 +15,7 @@
     </div>
 
     <div class="user-content">
-      <h1>Boletim de {{context.user.nome_usual}}</h1>
+      <h1 class="title">Boletim de {{context.user.nome_usual}}</h1>
 
       <form id="id_boletim_form" class="my-3" action="{{url_for('boletim')}}" method="post">
 
@@ -81,11 +81,5 @@
     </div>
   </div>
 </div>
-
-
-
-
-
-
 
 {% endblock content %}
