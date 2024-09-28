@@ -6,6 +6,8 @@
 
 Esse sistema web faz autenticação OAuth com o SUAP (Sistema Unificado de Administração Pública) para exibir ao usuário aluno seus dados e boletins dos seus períodos letivos.
 
+Nesse projeto foram utilizados Python, Flask, HTML, CSS, Javascript, jQuery e Bootstrap. 
+
 Projeto prático de disciplina aplicado pelo professor [Diego Cirilo](https://github.com/dvcirilo).
 
 ---
